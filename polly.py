@@ -16,13 +16,13 @@ list_question = [
 
 list_answer = ["좋음", "중간", "좋아지길"]
 
-question_number = 1
+for question in [0, 1, 2, 3] :
+    question_a = list_question[question] 
+    print("{}. {}".format(question+1, question_a))
+    for answer in [0, 1, 2] :
+        answer_a = list_answer[answer]
+        print("{}. {}".format(answer+1, answer_a), end="  ")
+    print("")
+    if question < 3 :
+        print("-----------------")
 
-for question in list_question :
-    print("{} {}".format(question_number, question))
-    print("1. {}".format(list_answer[0]), end=" , ")
-    print("2. {}".format(list_answer[1]), end=" , ")
-    print("3. {}".format(list_answer[2]))
-    print("-----------------")
-    question_number = question_number + 1
-print("End program!")
