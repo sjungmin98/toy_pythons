@@ -18,8 +18,8 @@ list_answer = ["좋음", "중간", "좋아지길"]
 
 for question in list_question:
     print("{}".format(question))
-    print("1.{}".format(list_answer[0]), end=" , ")
-    print("2.{}".format(list_answer[1]), end=" , ")
+    print("1.{}".format(list_answer[0]), end=" ")
+    print("2.{}".format(list_answer[1]), end=" ")
     print("3.{}".format(list_answer[2]))
     print("-----------------")
 
