@@ -16,7 +16,7 @@ list_question = [
 
 list_answer = ["좋음", "중간", "좋아지길"]
 
-for i, question in enumerate(list_question):
+for question in list_question:
     print("{}".format(question))
     print("1.{}".format(list_answer[0]), end=" , ")
     print("2.{}".format(list_answer[1]), end=" , ")
