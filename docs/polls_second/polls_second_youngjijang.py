@@ -34,8 +34,8 @@ for question in [0, 1, 2, 3] :
     index = num_question_result - 1
     list_result[index] = list_result[index] + 1
         
-    if question < 3 :
-        print("-----------------")
+if question < 3 :
+    print("-----------------")
 
 result = ((list_result[0] * 3) + (list_result[1] * 2) + (list_result[2] * 1)) / (3+2+1)
 
