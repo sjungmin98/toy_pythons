@@ -20,8 +20,8 @@ list_answer = ["좋음", "중간", "좋아지길"]
 # 답항 가중 평균 : 
 
 # (1*3 + 1*2 +2*1) / (3+2+1) = 0.86
-
-list_number = [0, 0, 0]
+2
+list_statistics = [0, 0, 0]
 
 for num_count_question in [0, 1, 2, 3]:
     str_list_question = list_question[num_count_question]
@@ -34,12 +34,12 @@ for num_count_question in [0, 1, 2, 3]:
     answer_a = input("\n당신의 생각은 몇 번 : ")
     answer_b = int(answer_a)
     index = answer_b - 1
-    list_number[index] = list_number[index] + 1
+    list_statistics[index] = list_statistics[index] + 1
 
 if num_count_question < 3:
     print("\n----------")
 
-result = ((list_number[0] * 3) + (list_number[1] * 2) + (list_number[2] * 1)) / (3 + 2 + 1) 
+result = ((list_statistics[0] * 3) + (list_statistics[1] * 2) + (list_statistics[2] * 1)) / (3 + 2 + 1) 
 print("---통계---")
-print("설문자 답항별 갯수 표시 : {}".format(list_number)) 
+print("설문자 답항별 갯수 표시 : {}".format(list_statistics)) 
 print("답항 가중 평균 : {}".format(result))
