@@ -36,8 +36,10 @@ for question in [0, 1, 2, 3] :
         
     if question < 3 :
         print("-----------------")
+    else:
+        pass
 
-result = ((list_result[0] * 3) + (list_result[1] * 2) + (list_result[2] * 1)) / (3+2+1)
+result = ((list_result[0] * 3) + (list_result[1] * 2) + (list_result[2] * 1)) / (list_result[0] + list_result[1] + list_result[2])
 
 print("")
 print("—--- 통 계 ----")
