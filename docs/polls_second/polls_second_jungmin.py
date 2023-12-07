@@ -29,15 +29,15 @@ for num_count_question in [0, 1, 2, 3]:
     print("{}. {}".format(num_count_question+1, str_list_question))
     for num_count_answer in [0, 1, 2]:
         str_list_answer = list_answer[num_count_answer]
-        print("{}.{}  ".format(num_count_answer+1, list_answer[num_count_answer]), end=" ")
+        print("{}.{}  ".format(num_count_answer+1, list_answer[num_count_answer]), end=" ")   
     
     answer_a = input("\n당신의 생각은 몇 번 : ")
     answer_b = int(answer_a)
     index = answer_b - 1
     list_statistics[index] = list_statistics[index] + 1
+    if num_count_question < 3:
+        print("\n----------")   
 
-if num_count_question < 3:
-    print("\n----------")
 
 result = ((list_statistics[0] * 3) + (list_statistics[1] * 2) + (list_statistics[2] * 1)) / (3 + 2 + 1) 
 print("---통계---")
