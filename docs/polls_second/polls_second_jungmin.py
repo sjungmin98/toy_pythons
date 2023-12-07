@@ -39,7 +39,7 @@ for num_count_question in [0, 1, 2, 3]:
         print("\n----------")   
 
 
-result = ((list_statistics[0] * 3) + (list_statistics[1] * 2) + (list_statistics[2] * 1)) / (3 + 2 + 1) 
+result = ((list_statistics[0] * 3) + (list_statistics[1] * 2) + (list_statistics[2] * 1)) / (1 + 1 + 2) 
 print("---통계---")
 print("설문자 답항별 갯수 표시 : {}".format(list_statistics)) 
 print("답항 가중 평균 : {}".format(result))
