@@ -45,5 +45,3 @@ print("설문자 답항별 갯수 표시 : {}".format(list_result))
 print("답변별 가중치 (좋음:3, 중간:2, 좋아지길:1)")
 print("답항 가중 평균 : {}".format(result))
 
-
-
