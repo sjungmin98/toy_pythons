@@ -1,3 +1,4 @@
+# 문제 출력/사용자 입력 받는 function
 def problems_main(questions) :
     problems_first = questions[1], questions[3], questions[5], questions[7]
     problems_second = questions[0], questions[2], questions[4], questions[6]
@@ -8,17 +9,18 @@ def problems_main(questions) :
         question_a = problems_second[question]
         question_b = problems_first[question]
 
+        # 문제 출력
         print("{}. {}".format(question + 1, question_a))
         print("{}".format(question_b))
 
+        # 사용자 입력 받음
         question_result = input("-정답 : ")
         print("")
 
         list_results.append(question_result)
-
         input_temp = [int(i) for i in list_results]
 
-
+    # 점수 합계/학점 출력 function
     def total_responses(score):
 
         # 문제 당 점수
@@ -39,14 +41,15 @@ def problems_main(questions) :
         else:
             score_result = "F"
         
+        # 결과 출력
         print("—----- 결과 —-------------")
         print("응답한 내용 : 1번 {}, 2번 {}, 3번 {}, 4번 {}".format(input_temp[0], input_temp[1], input_temp[2], input_temp[3]))
         print("당신 응답 합계 : {}점".format(score))
         print("학점은 {} 입니다.".format(score_result))
         return 
     
-    total_responses(input_temp)
-    return
+    return total_responses(input_temp)
+    
     
 
 # 출제 문제
