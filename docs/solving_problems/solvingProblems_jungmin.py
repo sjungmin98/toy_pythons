@@ -31,7 +31,7 @@ def problems_main(questions, corrects) :
 
         list_results.append(question_result)
 
-    return results, [int(i) for i in list_results]
+    return results, list_results
 
 list_problems = [
     'Python에서 변수를 선언하는 방법은? (점수: 10점)',
