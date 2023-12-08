@@ -17,6 +17,7 @@ input_temp = [2, 1, 1, 2]
 
 
 
+
 def total_responses(score):
 
     # 문제 당 점수
