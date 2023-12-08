@@ -1,4 +1,4 @@
-# # 출제 문제
+# # 출제 문제#
 # list_problems = [
 #         'Python에서 변수를 선언하는 방법은? (점수: 10점)',
 #         '1) var name 2) name = value 3) set name 4) name == value',
