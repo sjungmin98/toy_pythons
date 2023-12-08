@@ -34,7 +34,7 @@ list_corrects = [2, 1, 1, 2]
 list_result = [0, 0, 0, 0]
 list_problems_first = list_problems[1], list_problems[3], list_problems[5], list_problems[7]
 list_problems_second = list_problems[0], list_problems[2], list_problems[4], list_problems[6]
-
+list_list = []
 for question in [0, 1, 2, 3] :
     question_a = list_problems_second[question] 
     question_b = list_problems_first[question]
@@ -46,6 +46,11 @@ for question in [0, 1, 2, 3] :
     num_question_result = int(question_result)
     index = num_question_result - 1
     list_result[index] = list_result[index] + 1
+
+    list_list.append(question_result)
+
+print(list_list)
+print("답변 표시 : {}".format(list_result))
 
 
 
