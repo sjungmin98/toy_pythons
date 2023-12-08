@@ -11,7 +11,7 @@
 # ]
 # # 문제 당 정답
 # list_corrects = [2, 1, 1, 2]
-def problems_main(questions, answer_corrects) :
+def problems_main(questions, correct_answers) :
     results = [0, 0, 0, 0]
     problems_first = questions[1], questions[3], questions[5], questions[7]
     problems_second = questions[0], questions[2], questions[4], questions[6]
