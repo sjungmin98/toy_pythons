@@ -1,5 +1,4 @@
 def problems_main(questions) :
-    results = [0, 0, 0, 0]
     problems_first = questions[1], questions[3], questions[5], questions[7]
     problems_second = questions[0], questions[2], questions[4], questions[6]
 
