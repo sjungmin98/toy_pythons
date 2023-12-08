@@ -1,23 +1,30 @@
 # 문제 출력/사용자 입력 받는 function
 def problems_main(questions) :
+    
+    #list_problems 에서 질문에만 번호 부여하기 위해 인덱스 홀수 짝수로 나눔
     problems_first = questions[1], questions[3], questions[5], questions[7]
     problems_second = questions[0], questions[2], questions[4], questions[6]
-
+    
+    # 답을 저장할 빈 리스트
     list_results = []
 
+    #각 그룹에서 질문 가져옴
     for question in [0, 1, 2, 3]:
         question_a = problems_second[question]
         question_b = problems_first[question]
-
-        # 문제 출력
+        
+        #질문 표시
         print("{}. {}".format(question + 1, question_a))
         print("{}".format(question_b))
-
-        # 사용자 입력 받음
+        
+        #답변 input
         question_result = input("-정답 : ")
         print("")
-
+        
+        #리스트에 결과 추가
         list_results.append(question_result)
+        
+        #답을 정수로 변환하고 결과 반환
         input_temp = [int(i) for i in list_results]
 
     # 점수 합계/학점 출력 function
