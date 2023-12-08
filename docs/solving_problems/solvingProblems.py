@@ -13,6 +13,7 @@ def problems_main(questions, correct_answers) :
         print("{}".format(question_b))
 
         question_result = input("-정답 : ")
+        print("")
         num_question_result = int(question_result)
         index = num_question_result - 1
         results[index] = results[index] + 1
