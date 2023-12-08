@@ -38,14 +38,19 @@ list_problems_second = list_problems[0], list_problems[2], list_problems[4], lis
 for question in [0, 1, 2, 3] :
     question_a = list_problems_second[question] 
     question_b = list_problems_first[question]
+
     print("{}. {}".format(question+1, question_a))
     print("{}".format(question_b))
+
     for corrects in [0, 1, 2] :
         corrects_a = list_corrects[corrects]
+        
     question_result = input("-정답 : ")
     num_question_result = int(question_result)
     index = num_question_result - 1
     list_result[index] = list_result[index] + 1
+
+
 
 
 
