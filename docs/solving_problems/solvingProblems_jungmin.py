@@ -26,9 +26,6 @@ def problems_main(questions) :
         print("{}".format(question_b))
 
         question_result = input("-정답 : ")
-        num_question_result = int(question_result)
-        index = num_question_result - 1
-        results[index] = results[index] + 1
 
         list_results.append(question_result)
 
