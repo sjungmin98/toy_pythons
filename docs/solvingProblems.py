@@ -53,7 +53,7 @@ def total_responses(list_results):
     score = 0
 
     # 점수 합계
-    if list_results[0] == 2:
+    if input_temp[0] == 2:
         score += 10
     if list_results[1] == 1:
         score += 15
@@ -64,16 +64,16 @@ def total_responses(list_results):
 
     # 학점
     if score >= 30:
-        result = "A"
+        score_result = "A"
     elif score >= 20:
-        result = "B"
+        score_result = "B"
     else:
-        result = "F"
+        score_result = "F"
     
     print("—----- 결과 —-------------")
     print("응답한 내용 : 1번 {}, 2번 {}, 3번 {}, 4번 {}".format(list_results[0], list_results[1], list_results[2], list_results[3]))
     print("당신 응답 합계 : {}점".format(score))
-    print("학점은 {} 입니다.".format(result))
+    print("학점은 {} 입니다.".format(score_result))
 
 total_responses(list_results)
 
