@@ -12,6 +12,7 @@ list_problems = [
 # 문제 당 정답
 list_corrects = [2, 1, 1, 2]
 
+
 # 임의의 입력
 input_temp = [2, 1, 1, 2]
 
