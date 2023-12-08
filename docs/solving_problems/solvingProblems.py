@@ -14,9 +14,6 @@ def problems_main(questions) :
 
         question_result = input("-정답 : ")
         print("")
-        num_question_result = int(question_result)
-        index = num_question_result - 1
-        results[index] = results[index] + 1
 
         list_results.append(question_result)
 
