@@ -15,34 +15,38 @@ list_corrects = [2, 1, 1, 2]
 # 학점 기준 : 
 # A : 30 이상, B : 20 점 이상,  F : 20점 미만 
 
-
-### 난이도 출력, 학점계산 : solvingProblems_grade
-
 # 임의의 입력
-input_temp = [2, 1, 1, 2]
-count = 0
+input_temp = [2, 2, 1, 3]
 
-if input_temp[0] == 2: # 10점
-    count += 10
+def total_responses(score):
+
+    score = 0
+
+    # 점수 합계
+    if input_temp[0] == 2:
+        score += 10
+    if input_temp[1] == 1:
+        score += 15
+    if input_temp[2] == 1:
+        score += 10
+    if input_temp[3] == 2:
+        score += 5
+
+    # 학점
+    if score >= 30:
+        result = "A"
+    elif score >= 20:
+        result = "B"
+    else:
+        result = "F"
     
-elif input_temp[1] == 1:
-    count += 15
-elif input_temp[2] == 1:
-    count += 10
-elif input_temp[3] == 2:
-    count += 5
-
-    
+    print("—----- 결과 —-------------")
+    print("응답한 내용 : 1번 {}, 2번 {}, 3번 {}, 4번 {}".format(input_temp[0], input_temp[1], input_temp[2], input_temp[3]))
+    print("당신 응답 합계 : {}점".format(score))
+    print("학점은 {} 입니다.".format(result))
 
 
+total_responses(input_temp)
 
 
-
-
-
-
-print("—----- 결과 —-------------")
-print("응답한 내용 : {}".format())
-print("당신 응답 합계 : {}".format())
-print("학점은 {} 입니다.".format())
 
