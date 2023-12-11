@@ -21,7 +21,7 @@ class Question_Answer:
             question_result = input("-정답 : ")
 
             self.list_results.append(question_result)
-        self.list_results
+        return self.list_results
 
 
 # class instance
