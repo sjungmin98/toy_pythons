@@ -1,17 +1,3 @@
-# # 출제 문제
-# list_problems = [
-#         'Python에서 변수를 선언하는 방법은? (점수: 10점)',
-#         '1) var name 2) name = value 3) set name 4) name == value',
-# 		'Python에서 리스트(List)의 특징은 무엇인가요? (점수: 15점)',
-#         '1) 순서가 있고 변경 가능하다, 2) 중복된 값을 가질 수 없다, 3) 원소를 추가하거나 삭제할 수 없다, 4) 정렬된 상태로 유지된다', 
-#         'Python에서 조건문을 작성하는 방법은? (점수: 10점)', 
-#         '1) if-else, 2) for-in, 3) while, 4) def',
-#         'Python에서 함수를 정의하는 방법은? (점수: 5점)', 
-#         '1) class, 2) def, 3) import, 4) return'
-# ]
-# # 문제 당 정답
-# list_corrects = [2, 1, 1, 2]
-
 #질문과 답변기능을 하나로 묶은 클래스
 class Question_Answer:
     #함수가 인스턴스 메소드라면 첫 인자를 'self'로 줘야 대상이 되는 인스턴스가 정확히 무엇인지 확인
@@ -37,18 +23,6 @@ class Question_Answer:
             self.list_results.append(question_result)
         self.list_results
 
-list_problems = [
-        'Python에서 변수를 선언하는 방법은? (점수: 10점)',
-        '1) var name 2) name = value 3) set name 4) name == value',
-        'Python에서 리스트(List)의 특징은 무엇인가요? (점수: 15점)',
-        '1) 순서가 있고 변경 가능하다, 2) 중복된 값을 가질 수 없다, 3) 원소를 추가하거나 삭제할 수 없다, 4) 정렬된 상태로 유지된다',
-        'Python에서 조건문을 작성하는 방법은? (점수: 10점)',
-        '1) if-else, 2) for-in, 3) while, 4) def',
-        'Python에서 함수를 정의하는 방법은? (점수: 5점)',
-        '1) class, 2) def, 3) import, 4) return'
-    ]
-
-list_corrects = [2, 1, 1, 2]
 
 # class instance
 question_answer = Question_Answer(list_problems, list_corrects)
@@ -56,42 +30,6 @@ question_answer = Question_Answer(list_problems, list_corrects)
 # call funciton
 question_answer.problems_main()
 
-
-
-class Problems:
-    def __init__(self):
-        pass
-
-    # 문제 출력/사용자 입력 받는 function
-    def problems_main(self, questions) :
-        
-        #list_problems 에서 질문에만 번호 부여하기 위해 인덱스 홀수 짝수로 나눔
-        problems_first = questions[1], questions[3], questions[5], questions[7]
-        problems_second = questions[0], questions[2], questions[4], questions[6]
-        
-        # 답을 저장할 빈 리스트
-        list_results = []
-
-        #각 그룹에서 질문 가져옴
-        for question in [0, 1, 2, 3]:
-            question_a = problems_second[question]
-            question_b = problems_first[question]
-            
-            #질문 표시
-            print("{}. {}".format(question + 1, question_a))
-            print("{}".format(question_b))
-            
-            #답변 input
-            question_result = input("-정답 : ")
-            print("")
-            
-            #리스트에 결과 추가
-            list_results.append(question_result)
-            
-            #답을 정수로 변환하고 결과 반환
-            input_temp = [int(i) for i in list_results]
-            return input_temp
-        
         
 # 점수 합계/학점 출력 class
 class Statistics:
