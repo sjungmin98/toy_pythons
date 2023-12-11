@@ -19,12 +19,13 @@ class Question_Answer:
     def __init__(self, problems, correct_answers):
         self.problems = problems
         self.correct_answers = correct_answers
-        self.list_results = []
+        
     
     def problems_main(self):
         problems_first = self.problems[1], self.problems[3], self.problems[5], self.problems[7]
         problems_second = self.problems[0], self.problems[2], self.problems[4], self.problems[6]
-    
+        list_results = []
+        
         for question in range(4):
             question_a = problems_second[question]
             question_b = problems_first[question]
@@ -34,8 +35,9 @@ class Question_Answer:
 
             question_result = input("-정답 : ")
 
-            self.list_results.append(question_result)
-        self.list_results
+            
+            list_results.append(question_result)
+            print(list_results)
 
 list_problems = [
         'Python에서 변수를 선언하는 방법은? (점수: 10점)',

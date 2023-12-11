@@ -5,12 +5,13 @@ class Question_Answer:
     def __init__(self, problems, correct_answers):
         self.problems = problems
         self.correct_answers = correct_answers
-        self.list_results = []
-    
+        
     def problems_main(self):
         problems_first = self.problems[1], self.problems[3], self.problems[5], self.problems[7]
         problems_second = self.problems[0], self.problems[2], self.problems[4], self.problems[6]
-    
+
+        list_results = []
+        
         for question in range(4):
             question_a = problems_second[question]
             question_b = problems_first[question]
@@ -19,26 +20,18 @@ class Question_Answer:
             print("{}".format(question_b))
 
             question_result = input("-정답 : ")
+            
+            list_results.append(question_result)
 
-            self.list_results.append(question_result)
-        self.list_results
+            global input_temp
+            input_temp = [int(i) for i in list_results]
 
-
-# class instance
-question_answer = Question_Answer(list_problems, list_corrects)
-
-# call funciton
-question_answer.problems_main()
-
-        
 # 점수 합계/학점 출력 class
 class Statistics:
-
     def __init__(self):
         pass
-
+    
     def total_responses(self, input_temp):    # 점수 합계 출력
-
 
         # 문제 당 점수
         score_temp = [10, 15, 10, 5]
@@ -84,7 +77,10 @@ list_problems = [
 list_corrects = [2, 1, 1, 2]
 
 
-problems = Problems()
-problems.problems_main(list_problems)
+question_answer = Question_Answer(list_problems, list_corrects)
+question_answer.problems_main()
+
 statistics = Statistics()
-statistics.total_responses()
+statistics.total_responses(input_temp)
+
+        
