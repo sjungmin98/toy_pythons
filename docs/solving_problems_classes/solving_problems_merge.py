@@ -22,9 +22,10 @@ class Question_Answer:
             question_result = input("-정답 : ")
             
             list_results.append(question_result)
-
-            global input_temp
             input_temp = [int(i) for i in list_results]
+
+        return input_temp
+
 
 # 점수 합계/학점 출력 class
 class Statistics:
@@ -32,7 +33,7 @@ class Statistics:
         pass
 
     def total_responses(self, input_temp):    # 점수 합계 출력
-
+        input_temp = [int(i) for i in input_temp]
         # 문제 당 점수
         score_temp = [10, 15, 10, 5]
         score = 0
@@ -78,7 +79,8 @@ list_corrects = [2, 1, 1, 2]
 
 
 question_answer = Question_Answer(list_problems, list_corrects)
-question_answer.problems_main()
+result = question_answer.problems_main()
 
 statistics = Statistics()
-statistics.total_responses(input_temp)
+statistics.total_responses(result)
+
